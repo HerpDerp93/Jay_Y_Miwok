@@ -27,21 +27,21 @@ public class NumbersActivity extends AppCompatActivity {
         words.add(new Word("nine", "wo'e"));
         words.add(new Word("ten", "na'aacha"));
 
-            // adapter knows how to create layouts for each item in the list, using the
-            // simple_list_item_1.xml layout resource defined in the Android framework.
-            // This list item layout contains a single {@link TextView}, which the adapter will
-            // display a single word.
-            WordAdapter adapter = new WordAdapter(this, words);
+        // adapter knows how to create layouts for each item in the list, using the
+        // simple_list_item_1.xml layout resource defined in the Android framework.
+        // This list item layout contains a single {@link TextView}, which the adapter will
+        // display a single word.
+        WordAdapter adapter = new WordAdapter(this, words);
 
-            // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-            // There should be {@link ListView} with the view ID called list, which is declared in
-            // activity_numbers.xml layout file.
-            ListView listView = (ListView) findViewById(R.id.list);
+        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // There should be {@link ListView} with the view ID called list, which is declared in
+        // activity_numbers.xml layout file.
+        ListView listView = (ListView) findViewById(R.id.list);
 
-            // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
-            // {@link ListView} will display list items for each word in the list of words.
-            // Do this by calling the setAdapter method on the {@link ListView} object and pass in
-            // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
-            listView.setAdapter(adapter);
+        // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
+        // {@link ListView} will display list items for each word in the list of words.
+        // Do this by calling the setAdapter method on the {@link ListView} object and pass in
+        // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
+        listView.setAdapter(adapter);
     }
 }
